@@ -25,7 +25,6 @@ int main(int argc, char* argv[])
 			cap.set(CAP_PROP_POS_FRAMES, 0);
 			cap >> frame;
 		}
-		cv::pyrDown(frame, frame);
 		cv::cvtColor(frame, gray, cv::COLOR_BGR2GRAY);
 		if(prevgray.empty()) gray.copyTo(prevgray);
 		if (prev_pts.size()<50)
